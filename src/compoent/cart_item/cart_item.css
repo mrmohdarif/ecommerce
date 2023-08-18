@@ -1,0 +1,34 @@
+
+.card_product{
+background-color: rgba(0, 0, 0, 0.5);
+width: 60px;
+height: 60px;
+flex-shrink: 0;
+}
+.cart_item_img{
+    width: 100%;
+    height: 100%;
+}
+.close_btn{
+    cursor: pointer;
+    margin-left: 10px;
+}
+.cart_item_text{
+    display: flex;
+    color: #E11546;
+}
+.cart_products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.cross{
+    cursor: pointer;
+}
+.product_details{
+    position: relative;
+    overflow: hidden;
+    gap: 10px;
+  
+}

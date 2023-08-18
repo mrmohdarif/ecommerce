@@ -1,0 +1,40 @@
+/* .carousel-item{
+   
+    width: 800px;
+    height: 350px;
+}
+.active{
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+.caursol{
+    width: 600px;
+}
+.visually-hidden{
+    color: red;
+    
+} */
+.w-100{
+    /* width: 950px!important; */
+    width: 100%!important;
+    height: 380px;
+    /* margin-left: 200px; */
+    /* margin-left: 200px; */
+}
+.visually-hidden{
+    display: block;
+    color: #E11546;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width:600px) {
+    .w-100 {
+        width: 350px!important;
+        height: 250px;
+        margin-left: 30px;
+    }
+    
+}

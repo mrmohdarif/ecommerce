@@ -1,0 +1,79 @@
+.cardItem{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+    justify-content: space-evenly;
+  
+}
+.Item{
+
+    border: 1px solid gainsboro;
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+.earbud{
+
+width: 250px;
+height: 250px;
+}
+.price_section{
+    display: flex;
+    justify-content: space-between;
+}
+.price_discount{
+display: flex;
+flex-direction: column;
+margin: 0px;
+cursor: pointer;
+}
+.price{
+    margin: 0px;
+    font-weight: bold;
+}
+.price:hover{
+    font-size: 22px;
+}
+.discount{
+    text-decoration: line-through;
+    color: #E11546;
+}
+
+.add_btn{
+    color: #E11546;
+    border: 2px solid #E11546;
+    background-color: #F5F5F5;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 9px 0px;
+    padding: 0px 20px;
+}
+.product_heading{
+    font-size: 26px;
+    margin-left: 4.5rem;
+}
+.product_des{
+    margin: 20px 20px
+}
+.add_btn:hover{
+    background-color: #E11546;
+    color: white;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width:600px) {
+    .cardItem{
+        gap: 20px;
+    }
+    .earbud {
+        
+        width: 350px;
+        height: 350px;
+    }
+   .product_des{
+        margin: 20px 20px
+    }
+    .product_heading {
+    margin-left: 2rem;
+    font-size: 31px;
+}
+}

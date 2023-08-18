@@ -1,0 +1,115 @@
+/* nav css */
+.main_nav_section{
+    padding-top: 16px;
+   
+}
+.nav_section{
+    display: flex;
+    /* justify-content:space-around; */
+    /* border: 1px solid green; */
+    background-color: #FFFFFF;
+    justify-content: space-between;
+    margin: 0px 15px;
+    
+}
+.search_cart_profile{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* border: 1px solid red; */
+    gap: 60px;
+}
+
+.input_search{
+    width: 350px;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 50px;
+    background-color: #F4F5F7;
+    border: none;
+    outline: none;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.logo{
+    width: auto;
+    height: 70px;
+    cursor: pointer;
+    display: flex;
+}
+.cart{
+    width: 30px;
+    height: 30px;
+    fill: #E11546;
+}
+.cart_icon{
+    display: flex;  
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+}
+.cart_count{
+    
+    color: #E11546;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 0px 5px;
+    position: relative;
+    top: -10px;
+    left: -5px;
+    background-color: darkslateblue;
+    color: aliceblue;
+}
+
+.svg_profile_icon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+}
+.input_search::placeholder{
+    color: #E11546;
+}
+ 
+/* @media only screen and (max-width: 600px) {
+
+}  */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 600px) {
+    .svg_profile_icon {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+    .input_search {
+        width: 200px;
+        padding: 11px;
+        font-size: 14px;  
+    }
+    .logo {
+        width: auto;
+        height: 35px;     
+    }
+    .cart {
+        width: 25px;
+        height: 25px;
+        fill: #E11546;
+    }
+    .search_cart_profile{
+        gap: 5px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {} */
