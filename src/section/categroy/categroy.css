@@ -29,12 +29,56 @@
 .drop_down_aroow{
     font-size: 30px;
     color: #E11546;
-    background-color: whitesmoke;
+    background-color: whitesmoke;   
+}
+.drop_down_aroow:hover{
+    animation-name: rotation;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-direction: normal
 }
 .drop_down{
+
     display: flex;
     background-color: whitesmoke;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
+.category_item_name_grocery{
+width: auto;
+height: auto;
+/* position: absolute; */
+z-index: 1;
+display: flex;
+flex-direction: column;
+
+}
+.grocery_list{
+    margin-right: 10px;
+    /* list-style-type: none; */
+    margin-right: 2rem
+}
+.grocery_ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100px;
+}
+.submenu{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    justify-content: space-around;
+    margin: 25px 50px;
+}
+/* .diaplay_navigation{
+    display: none;
+} */
+
 
 @media only screen and (max-width: 600px) {
     .cat_item_image{
@@ -54,5 +98,14 @@
     font-size: 15px;
     }
     
+    
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     
 }

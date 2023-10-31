@@ -1,0 +1,17 @@
+.cardItem{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+    margin: 0px 50px;
+    /* justify-content: center; */
+}
+
+.Item {
+  margin-bottom: 20px;
+}
+
+h1 {
+ 
+    margin-left: 6.8rem;
+}
+

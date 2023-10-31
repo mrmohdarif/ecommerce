@@ -74,7 +74,30 @@
 .input_search::placeholder{
     color: #E11546;
 }
- 
+.login_register{
+    display: flex;
+    flex-direction: column;
+}
+.profile_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auth_login_register{
+    color: #E11546;
+}
+.logout{
+    background-color:#E11546;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.login_register_link{
+display: flex;
+flex-direction: column;
+}
 /* @media only screen and (max-width: 600px) {
 
 }  */

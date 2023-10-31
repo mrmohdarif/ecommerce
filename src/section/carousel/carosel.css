@@ -17,10 +17,10 @@
     
 } */
 .w-100{
-    /* width: 950px!important; */
-    width: 100%!important;
-    height: 380px;
-    /* margin-left: 200px; */
+    width: 500px!important;
+    /* width: 60!important; */
+    height: 300px;
+    margin-left: 400px;
     /* margin-left: 200px; */
 }
 .visually-hidden{
@@ -28,7 +28,9 @@
     color: #E11546;
     font-weight: bold;
 }
-
+.curso{
+    z-index: 2;
+}
 
 @media only screen and (max-width:600px) {
     .w-100 {

@@ -1,0 +1,91 @@
+.container
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.register_image{
+    height: 100vh;
+    width: 100%;
+    
+}
+.img_container{
+    /* border:2px solid red; */
+    width: 50%;
+}
+.user_form{
+    /* border: 2px solid blue; */
+    width: 50%;
+}
+.form_icons{
+    width: 30px;
+    height: 30px;
+    /* font-size: 100px; */
+    margin-right: 20px;
+   
+}
+.register_input_element{
+    border: 2px solid #E11546;
+    /* height: 10px; */
+    border-radius: 5px;
+    margin-bottom: 30px;
+    width: 15.5rem;
+}
+.user_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.link_info{
+    margin-left: 4.5rem;
+}
+.register_btn
+{
+        margin-left: 100px;
+        background: white;
+        border: 2px solid white;
+        background: #E11546;
+        color: white;
+        padding: 5px 36px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 500;
+}
+.register_btn:hover{
+    background-color: white;
+    color: #E11546;
+    border: 2px solid #E11546;
+    transition: 1s;
+   
+}
+h1{
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+.register_social_icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    gap: 10px;
+    margin-left: 50px;
+}
+.social_icons{
+  
+    width: 25px;
+    height: 25px;
+}
+
+@media screen and (max-width:600px) {
+    .img_container{
+        display: none;
+    }
+    .register_input_element{
+        width: 12.5rem;
+    }
+    .link_info {
+        margin-left: 3rem;
+    }
+}
