@@ -145,7 +145,7 @@ function Address() {
       'payment': { 'paidAmount': paidamount, 'amount': amount },
     }
     console.log(address);
-    axios.post('http://localhost:8000/api/order/userAddress', data).then((res) => {
+    axios.post('https://ecommercebackend-ehsf.onrender.com/api/order/userAddress', data).then((res) => {
       console.log(res.data)
       handleOpenRozerpay(res.data)
       if (res.status == 200) {

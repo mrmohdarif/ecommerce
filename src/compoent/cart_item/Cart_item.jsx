@@ -20,7 +20,7 @@ function Cart_item(props) {
     // setId(id)
     //firt wala
       console.log("elllo",id)
-      axios.post("http://localhost:8000/cat/increseqty",{id,userId}).then((res)=>{
+      axios.post("https://ecommercebackend-ehsf.onrender.com/cat/increseqty",{id,userId}).then((res)=>{
       console.log(res.data.quantity,res);
        setCount(res.data.quantity)
        props.countfun()
@@ -32,7 +32,7 @@ function Cart_item(props) {
   }
 
   const handleDecrese=(id)=>{
-    axios.post("http://localhost:8000/cat/decreseqty",{id,userId}).then((res)=>{
+    axios.post("https://ecommercebackend-ehsf.onrender.com/cat/decreseqty",{id,userId}).then((res)=>{
      console.log(res);
      props.countfun()
     }).catch((err)=>{
@@ -42,7 +42,7 @@ function Cart_item(props) {
   const deleteCart=(id)=>{
     const userId=localStorage.getItem('userId')
 
-    axios.post("http://localhost:8000/cat/deletecart",{id,userId}).then((res)=>{
+    axios.post("https://ecommercebackend-ehsf.onrender.com/cat/deletecart",{id,userId}).then((res)=>{
       console.log(res);
      }).catch((err)=>{
        console.log(err);

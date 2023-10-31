@@ -49,7 +49,7 @@ function Singleproduct() {
       userId:userId,
       itemqty:`${Qty}`
     }
-     axios.post(`http://localhost:8000/cart/cartData`,items).then((res)=>{
+     axios.post(`https://ecommercebackend-ehsf.onrender.com/cart/cartData`,items).then((res)=>{
           
      console.log(res)
      if(res.status==200)

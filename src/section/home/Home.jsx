@@ -14,7 +14,7 @@ function Home() {
   }, [])
 
   const getchData=async()=>{
-    const response=await axios.get('http://localhost:8000/')
+    const response=await axios.get('https://ecommercebackend-ehsf.onrender.com/')
     try{
       console.log(response.data);
       setData(response.data)

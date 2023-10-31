@@ -19,7 +19,7 @@ function Cart({ setshowcart }) {
     }
     useEffect(()=>{
         console.log("useEffect cart.js")
-     axios.post('http://localhost:8000/cat/getcartData',{userId}).then((res)=>{
+     axios.post('https://ecommercebackend-ehsf.onrender.com/cat/getcartData',{userId}).then((res)=>{
       console.log(res.data.insertData)
       setcartData(res.data.insertData)
        res.data.insertData.find((value,index)=>{
@@ -41,7 +41,7 @@ function Cart({ setshowcart }) {
         
        navigate('/address',{state:{Data:cartData,amount:totel}})
        console.log(amount);
-       axios.post('http://localhost:8000/api/order',{'amount':amount}).then((res)=>{
+       axios.post('https://ecommercebackend-ehsf.onrender.com/api/order',{'amount':amount}).then((res)=>{
         console.log(res)
        }).catch((err)=>{
            console.log(err)

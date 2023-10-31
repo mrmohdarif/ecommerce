@@ -39,7 +39,7 @@ const userRegisterData={
 }
 const handleRegister=(e)=>{
 e.preventDefault()
-axios.post("http://localhost:8000/api/register",userRegisterData).then((res)=>{
+axios.post("https://ecommercebackend-ehsf.onrender.com/api/register",userRegisterData).then((res)=>{
 console.log(res)
 alert(res.data+"go to login")
 setName('')

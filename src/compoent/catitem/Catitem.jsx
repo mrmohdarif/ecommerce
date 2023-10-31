@@ -24,7 +24,7 @@ function Catitem() {
   
 
   const fetchData = async () => {
-    const response = await axios.get(`http://localhost:8000/cat/${categ}`)
+    const response = await axios.get(`https://ecommercebackend-ehsf.onrender.com/cat/${categ}`)
     try {
       console.log(response);
       setData(response.data)
