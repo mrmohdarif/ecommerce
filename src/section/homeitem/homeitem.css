@@ -1,7 +1,8 @@
 .cardItem{
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 0px;
+    margin: 0 auto;
+    width: 1200px;
     justify-content: space-evenly;
   
 }
@@ -61,14 +62,15 @@ cursor: pointer;
     transition: 0.5s;
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:490px) {
     .cardItem{
         gap: 20px;
+        width:auto
     }
     .earbud {
         
-        width: 350px;
-        height: 350px;
+        width: 300px;
+        height: 300px;
     }
    .product_des{
         margin: 20px 20px
@@ -77,4 +79,17 @@ cursor: pointer;
     margin-left: 2rem;
     font-size: 31px;
 }
+.Item{
+    width:305px
+}
+
+       .product_heading{
+        margin:0px 0px 0px 30px;
+        font-size: 35px;
+       }
+}
+@media only screen and (min-width:700px) and (max-width:850px){
+    .cardItem{
+        width:700px;
+    }
 }

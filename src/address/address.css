@@ -102,3 +102,19 @@ table>tr{
 display: flex;
 justify-content: space-between;
 }
+@media screen and (max-width:490px) {
+    .address_box{
+        width:350px;
+        margin-bottom: 10px;
+    }
+    .product{
+      width: 300px;
+    }
+    .payment_product{
+        display: flex;
+        flex-direction: column;
+    }
+    .main{
+     width: 350px;
+    }
+}

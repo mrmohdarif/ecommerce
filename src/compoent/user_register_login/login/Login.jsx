@@ -1,17 +1,14 @@
 import React, { useState } from 'react'
 import '../login/login.css'
-import register from '../../../content/register_login/images.jpg'
 import mainstreet from '../../../content/register_login/side1.png'
 import{AiOutlineMail,AiFillLinkedin} from 'react-icons/ai'
 import {AiFillLock} from 'react-icons/ai'
-import {FaMobileScreen} from 'react-icons/fa6'
-import {ImProfile} from 'react-icons/im'
 import {AiOutlineInstagram} from 'react-icons/ai'
 import {BsWhatsapp,BsFacebook} from 'react-icons/bs'
 import Footer from '../../../section/footer/Footer'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-
+import Nav from "../../../section/navSection/Nav";
 function Login() {
   const [email,setEmail]=useState()
   const [password,setPassword]=useState()
@@ -44,6 +41,7 @@ function Login() {
   
   return (
     <>
+      <Nav/>
     <div className="main_container">
             <div className="container">
                 <div className="img_container" >

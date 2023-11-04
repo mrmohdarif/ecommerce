@@ -1,22 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../content/logo/logo1.png";
 import "../../section/navSection/nav.css";
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import Cart from "../../compoent/cart/Cart";
 import { Link, useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux'
 import axios from "axios";
 
 function Nav() {
-  const counter=useSelector((state)=>state.counter.value)
+  const userId=localStorage.getItem('userId')
 
-  const [scroll,setScrool]=useState(false)
+ const [counter,setcounter]=useState(0)
+ let [count,setCount]=useState(0)
   const [show,setShow]=useState(false)
-  // const [user,setUser]=useState('Welcome')
+ 
   let  userName=localStorage.getItem('userName')
-    // const firstName=userName.split(' ')[0]
-    // setUser(userName)
-    // console.log(firstName);
+  
   console.log(userName);
   const navigate=useNavigate()
   const logoHandle=()=>{
@@ -30,6 +28,19 @@ function Nav() {
     navigate('/')
     
   }
+ const countapp=()=>{
+  setCount(count++)
+ }
+  useEffect(() => { 
+  axios.post('https://ecommercebackend-ehsf.onrender.com/item/counter',{userId}).then((res)=>{
+    console.log(res)
+    setcounter(res.data.length)
+  }).catch((err)=>{
+    console.log(err);
+  })
+   
+  }, [count])
+  
   return (
     <>
     <header>
@@ -81,7 +92,7 @@ function Nav() {
         </nav>
       </div>
     </header>
-    {show && <Cart setshowcart={setShow}/>}
+    {show && <Cart setshowcart={setShow} counterApp={countapp}/>}
     </>
   );
 }

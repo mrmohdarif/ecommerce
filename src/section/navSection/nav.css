@@ -106,14 +106,14 @@ flex-direction: column;
 /* @media only screen and (min-width: 600px) {} */
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 490px) {
     .svg_profile_icon {
         width: 25px;
         height: 25px;
         cursor: pointer;
     }
     .input_search {
-        width: 200px;
+        width: 150px;
         padding: 11px;
         font-size: 14px;  
     }
@@ -128,6 +128,9 @@ flex-direction: column;
     }
     .search_cart_profile{
         gap: 5px;
+    }
+    h1{
+        margin:0px
     }
 }
 

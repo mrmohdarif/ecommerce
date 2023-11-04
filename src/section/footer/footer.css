@@ -26,7 +26,8 @@ text-transform: uppercase;
     flex-direction: column;
 }
 .text_cat,.text_email,.text_phone,.text_address,.text_something{
-    color: rgba(0, 0, 0, 0.5)
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 .bottom_bar{
     margin: 50px 20px;
@@ -40,11 +41,11 @@ font-size: 22px;
 font-weight: bold;
 margin-bottom: 15px;
 }
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:490px) {
     .footer_content
     {
         flex-direction: column;
-        width: 380px;
+        width: 300px;
     }
     .col{
         width: 300px;
@@ -59,4 +60,10 @@ margin-bottom: 15px;
         font-size: 16px;
     }
 }
-
+@media only screen and (min-width:700px) and (max-width:850px){
+    .footer_content{
+        display:flex;
+        flex-direction: column;
+        width: 700px;
+    }
+}

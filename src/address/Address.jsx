@@ -36,6 +36,7 @@ function Address() {
       console.log('something went wrongs');
     })
   }
+
   const handlepostOffice = (e) => {
     setoffice(e.target.value)
     // axios.get(`https://api.postalpincode.in/postoffice/${e.target.value}`).then((res) => {
@@ -102,7 +103,7 @@ function Address() {
       "order_id": data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
       "handler": function (response) {
         console.log(response)
-       
+        navigate('/')
         // axios.post('http://localhost:8000/api/order/payment/verify', { response }).then((res) => {
         //   console.log(res)
         // }).catch((err) => {
@@ -150,7 +151,7 @@ function Address() {
       handleOpenRozerpay(res.data)
       if (res.status == 200) {
         alert("Your order place sucessfully")
-        // navigate('/')
+       
       }
     }).catch((err) => {
       console.log(err);
@@ -174,8 +175,10 @@ function Address() {
             <form action="">
 
               <input type="number" name="" id="" className="address_box" placeholder='Enter Your Delevery Pincode' onChange={handlepincode} />
+              <br/>
               <input type="text" name="" id="" className="address_box" placeholder='Enter Your Post Office' onChange={handlepostOffice} />
               <span>{officemsg}</span>
+              <br/>
               <button className='address_btn get_addresss_btn' onClick={handleAddress}>Get Address</button>
               {/* // <input type="text" name="" id="" className="address_box get_addresss" placeholder='Enter your full address with pin code' /> */}
               <div>

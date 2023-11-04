@@ -5,7 +5,7 @@
    align-items: center;
 }
 .register_image{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     
 }
@@ -63,6 +63,7 @@
 h1{
   margin-bottom: 20px;
   font-weight: 800;
+
 }
 .register_social_icons{
     display: flex;
@@ -77,8 +78,10 @@ h1{
     width: 25px;
     height: 25px;
 }
-
-@media screen and (max-width:600px) {
+.details_icon{
+    display: flex;
+}
+@media screen and (max-width:490px) {
     .img_container{
         display: none;
     }
@@ -88,4 +91,21 @@ h1{
     .link_info {
         margin-left: 3rem;
     }
+    h1{
+     margin:0px 0px 0px 25px;
+     font-size: 35px;
+    }
+    .details_icon{
+        display: flex;
+        justify-content: space-around;
+         align-items: baseline
+    }
+    .user_form{
+    width: auto;
+    height: auto;
+    margin-top:50px;
+    }
+    .register_btn{
+        margin-left: 70px;
+    } 
 }

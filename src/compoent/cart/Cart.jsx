@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import '../cart/cart.css'
 import { MdClose } from 'react-icons/md'
-import { BsCartX } from 'react-icons/bs'
 import Cart_item from '../cart_item/Cart_item'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-function Cart({ setshowcart }) {
+function Cart({setshowcart,counterApp}) {
+    console.log(counterApp)
     const navigate=useNavigate()
     const [cartData,setcartData]=useState([])
     const [totel,setTotal]=useState(0)
@@ -19,6 +19,7 @@ function Cart({ setshowcart }) {
     }
     useEffect(()=>{
         console.log("useEffect cart.js")
+        counterApp()
      axios.post('https://ecommercebackend-ehsf.onrender.com/cat/getcartData',{userId}).then((res)=>{
       console.log(res.data.insertData)
       setcartData(res.data.insertData)
@@ -28,17 +29,15 @@ function Cart({ setshowcart }) {
            amount.push(total_amount)
            const reduced=amount.reduce((acc,item)=>acc+item)
            console.log(reduced);
-           setTotal(reduced)
+           setTotal(reduced/2)
            console.log(amount)
        })
      }).catch((err)=>{
        console.log(err);
      })
     },[count])
-    // console.log("myamount", myamount);
     const handleCheckout=(amount)=>{
-        console.log(amount);
-        
+        console.log(amount);   
        navigate('/address',{state:{Data:cartData,amount:totel}})
        console.log(amount);
        axios.post('https://ecommercebackend-ehsf.onrender.com/api/order',{'amount':amount}).then((res)=>{
@@ -61,13 +60,9 @@ function Cart({ setshowcart }) {
                             </span>
                         </div>
                   
-                    {/* <div className="empty_cart">
-                        <BsCartX className='Bs_cart'/>
-                        <span>No product in cart</span>
-                        <button className="return_cart" onClick={}>RETURN TO SHOP</button>
-                    </div> */}
+                   
                        <div className="cart_data_div">
-                       <Cart_item data={cartData} countfun={increseCount}/>
+                       <Cart_item data={cartData} countfun={increseCount} setshow={setshowcart } cartCount={counterApp}/>
                        </div>
                         
                     <div className="cart_footer">

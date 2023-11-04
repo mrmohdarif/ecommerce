@@ -32,11 +32,17 @@
     z-index: 2;
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:490px) {
     .w-100 {
-        width: 350px!important;
-        height: 250px;
+        width: 300px!important;
+        height: 230px;
         margin-left: 30px;
     }
     
+}
+
+@media only screen and (min-width:700px) and (max-width:850px) {
+    .w-100{
+        margin-left: 170px;
+    }
 }

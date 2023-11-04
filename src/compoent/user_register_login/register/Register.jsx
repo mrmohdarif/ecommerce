@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import register from '../../../content/register_login/images.jpg'
 import mainstreet from '../../../content/register_login/side1.png'
 import '../register/register.css'
 import{AiOutlineMail,AiFillLinkedin} from 'react-icons/ai'
@@ -9,9 +8,9 @@ import {ImProfile} from 'react-icons/im'
 import {AiOutlineInstagram} from 'react-icons/ai'
 import {BsWhatsapp,BsFacebook} from 'react-icons/bs'
 import Footer from "../../../section/footer/Footer";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import Nav from "../../../section/navSection/Nav";
 function Register(){
   const [name,setName]=useState('')
 const [email,setEmail]=useState('')
@@ -60,7 +59,8 @@ setPassword('')
 })
 }
     return(
-        <>
+        <> 
+        <Nav/>
           <div className="main_container">
             <div className="container">
                 <div className="img_container" >
@@ -69,18 +69,27 @@ setPassword('')
                 <div className="user_form">
                     <h1>Sign Up</h1>
                     <form action="" className="">
-                        <label htmlFor="name"><ImProfile className="form_icons"/></label>
-                         <input type="text" name="" id="name" placeholder="Enter your number" className="register_input_element" onChange={nameInput} value={name}/>
-                         <br />
+                      <div className="details_icon">
+                      <label htmlFor="name"><ImProfile className="form_icons"/></label>
+                      <input type="text" name="" id="name" placeholder="Enter your name" className="register_input_element" onChange={nameInput} value={name} />
+                      </div>
+                        
+                         <div className="details_icon">
                          <label htmlFor="email"><AiOutlineMail className="form_icons"/></label>
-                         <input type="email" name="" id="email" placeholder="Enter your email" className="register_input_element" onChange={emailInput} value={email}/>
-                         <br />
+                         <input type="email" name="" id="email" placeholder="Enter your email" className="register_input_element" onChange={emailInput} value={email} required/>
+                         </div>
+                         
+                         <div className="details_icon">
                          <label htmlFor="phone"><FaMobileScreen className="form_icons"/></label>
-                         <input type="number" name="" id="phone" placeholder="Phone number" className="register_input_element" onChange={numberInput} value={number}/>
-                         <br />
+                         <input type="number" name="" id="phone" placeholder="Phone number" className="register_input_element" onChange={numberInput} value={number} required/>
+                         </div>
+                         
+                         <div className="details_icon">
                          <label htmlFor="password"><AiFillLock className="form_icons"/></label>
-                         <input type="password" name="" id="password" placeholder="Enter password" className="register_input_element" onChange={passInput} value={password}/>
-                         <br />
+                         <input type="password" name="" id="password" placeholder="Enter password" className="register_input_element" onChange={passInput} value={password} required/>
+                         </div>
+                         
+                     
                           <button className="register_btn" onClick={handleRegister}>Register</button>
                     </form>
                     <Link to={'/login'}>I  have an account</Link>

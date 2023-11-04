@@ -4,7 +4,11 @@ import { BsPhone } from 'react-icons/bs'
 import { AiOutlineMail } from 'react-icons/ai'
 import '../footer/footer.css'
 import payment from '../../content/payment/payments.png'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+
 function Footer() {
+    const navigate=useNavigate()
     return (
         <footer>
             <div className='footer_content'>
@@ -48,12 +52,12 @@ function Footer() {
                 <div className='col5 col'>
                     <div className="categories">Categories</div>
                     <div className='cat_content'>
-                    <span className='text_cat'>Groceries</span>
-                    <span className='text_cat'>Laptop</span>
-                    <span className='text_cat'>Phone</span>
-                    <span className='text_cat'>Watch</span>
-                    <span className='text_cat'>Headphone</span>
-                    <span className='text_cat'>Appliances</span>
+                    <span className='text_cat' onClick={()=>navigate('/')}>Groceries</span>
+                    <span className='text_cat' onClick={()=>navigate('/category/laptops')}>Laptop</span>
+                    <span className='text_cat' onClick={()=>navigate('/category/smartphones')}>Phone</span>
+                    <span className='text_cat' onClick={()=>navigate('/category/watch')}>Watch</span>
+                    <span className='text_cat' onClick={()=>navigate('/category/headphone')}>Headphone</span>
+                    <span className='text_cat' onClick={()=>navigate('/category/homeappliances')}>Appliances</span>
                     </div>
                     
                 </div>

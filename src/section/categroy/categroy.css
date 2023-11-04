@@ -80,7 +80,7 @@ flex-direction: column;
 } */
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 490px) {
     .cat_item_image{
         overflow-x: auto;
         margin: 15px 0px;
@@ -92,7 +92,7 @@ flex-direction: column;
         height: 50px;
     }
     .subnavbtn{
-        font-size: 10px;
+        font-size: 8px;
     }
     .drop_down_aroow{
     font-size: 15px;

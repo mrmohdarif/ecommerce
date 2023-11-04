@@ -6,15 +6,13 @@ import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { TiSocialLinkedin } from 'react-icons/ti'
 import { SlSocialInstagram } from 'react-icons/sl'
 import { TiSocialYoutube } from 'react-icons/ti'
-import img from '../../content/products/earbuds-prod-2.webp'
 import { BsCurrencyRupee } from 'react-icons/bs'
 import Nav from '../../section/navSection/Nav'
 import Footer from '../../section/footer/Footer'
-import earbud1 from '../../content/products/earbuds-prod-1.webp'
 import Relatedproduct from '../relatedproduct/Relatedproduct'
 import { useLocation, useParams } from 'react-router-dom'
-import {useSelector,useDispatch} from 'react-redux'
-import { increment } from '../../store/counterSlice'
+import {useDispatch} from 'react-redux'
+
 import axios from 'axios'
 function Singleproduct() {
   const dispatch=useDispatch()
@@ -26,8 +24,7 @@ function Singleproduct() {
   const DataCategorey = location.state.relatedCard
   const id = param.id
   console.log(Data, id,location,DataCategorey);
-  //  console.log(location.state.cardData)
-  //  console.log(param);
+
   const handleDec = () => {
     if (Qty <= 1) {
       return Qty
@@ -37,10 +34,7 @@ function Singleproduct() {
   const handlIec = () => {
     setQty(Qty + 1)
   }
-  //  const items={
-  //    productId:id,
-  //    itemqty:`${Qty}`
-  //  }
+ 
    const cartData=(id)=>{
     console.log(id);
     const userId=localStorage.getItem('userId')

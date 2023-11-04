@@ -128,3 +128,16 @@
         transform: translateX(0%);
     }
 }
+@media only screen and (max-width: 490px){
+    .cart_content{
+        width: 350px;
+    }
+    .card_header{
+        justify-content: space-around;
+    }
+}
+@media only screen and (min-width:700px) and (max-width:850px){
+    .cart_content{
+        width: 500px;
+    }
+}
